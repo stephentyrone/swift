@@ -106,6 +106,7 @@ import HTTP2StateMachine
 import IndexPathTest
 import InsertCharacter
 import IntegerParsing
+import IntegerPrinting
 import Integrate
 import IterateData
 import Join
@@ -306,6 +307,9 @@ register(HTTP2StateMachine.benchmarks)
 register(IndexPathTest.benchmarks)
 register(InsertCharacter.benchmarks)
 register(IntegerParsing.benchmarks)
+if #available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *) {
+  register(IntegerPrinting.benchmarks)
+}
 register(Integrate.benchmarks)
 register(IterateData.benchmarks)
 register(Join.benchmarks)
